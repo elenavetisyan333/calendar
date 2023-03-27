@@ -33,6 +33,7 @@
 .calendar{
     background-color: rgba(255, 255, 255, 0.06);
     padding: 10px 20px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
 .calendar thead{
     display: flex;
