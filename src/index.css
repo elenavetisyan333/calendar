@@ -24,7 +24,8 @@
     gap: 10px;
 }
 .info h1{
-    font-size: 50px
+    font-size: 50px;
+    text-shadow: 2px 2px 1px black;
 }
 .info h2{
     color: rgb(159, 230, 253);
@@ -77,11 +78,11 @@ tbody tr{
     grid-template-rows: 1fr;
 }
 tbody tr td{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 500;
     width: 40px;
     text-align: center;
-    padding: 2px 5px;
+    padding: 3px 4px;
     color: rgb(159, 230, 253);
 }
 .tdOfDay{
@@ -89,10 +90,12 @@ tbody tr td{
     font-weight: 400;
     font-size: 25px;
     color: white;
+    transition: 0.2s;
 }
 .tdOfDay:hover{
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
 }
 
 
@@ -104,9 +107,11 @@ button{
     font-size: 30px;
     font-weight: bold;
     color: aliceblue;
-
+    transition: 0.2s;
 }
 button:hover{
     cursor: pointer;
     color: rgb(159, 230, 253);
+    text-shadow: 0px 0px 3px rgba(159, 230, 253, 0.7);
+    transition: 0.2s;
 }
