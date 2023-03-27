@@ -9,7 +9,7 @@ function Days({ year, months, monthId, setSelectedDay, setSelectedMonth, setSele
     let nullKey = 1;
 
     function getDays(){
-        if(monthId == 1 && (year % 100 === 0) ? ( year % 400 === 0) : (year % 4 === 0)){
+        if(monthId == 1 && year % 4 === 0){
             return daysOfMOnths[monthId] + 1;
         }
         else return daysOfMOnths[monthId]
