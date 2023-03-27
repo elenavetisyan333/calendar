@@ -9,13 +9,16 @@ function Days({ year, months, monthId, setSelectedDay, setSelectedMonth, setSele
     let nullKey = 1;
 
     function getDays(){
-        return year % 4 == 0 ? daysOfMOnths[monthId] + 1 : daysOfMOnths[monthId];
+        if(monthId == 1 && (year % 100 === 0) ? ( year % 400 === 0) : (year % 4 === 0)){
+            return daysOfMOnths[monthId] + 1;
+        }
+        else return daysOfMOnths[monthId]
     }
 
     for(let i = 0; i < (getDays() + date.getDay()) / 7; i++){
         monthDays[i] = [];
         for(let j = 0; j < 7; j++){
-            if( (i == 0 && j < date.getDay()) || day > daysOfMOnths[monthId]) monthDays[i][j] = null;
+            if( (i == 0 && j < date.getDay()) || day > getDays()) monthDays[i][j] = null;
             else monthDays[i][j] = new Date(year, monthId, day++);
         }
 
